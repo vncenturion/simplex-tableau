@@ -1,0 +1,12 @@
+func_objetivo = [3, 5, 0, 0, 0]  # x1, x2, x3, x4, x5
+
+matriz_restricoes = np.array([
+    [1, 0, 1, 0, 0],
+    [0, 2, 0, 1, 0],
+    [3, 2, 0, 0, 1]
+], dtype=float)
+
+vetor_restricoes = np.array([4, 12, 18], dtype=float)
+
+# Rodar Simplex
+resultado=simplex(func_objetivo, matriz_restricoes, vetor_restricoes, tipo='max')
